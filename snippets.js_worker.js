@@ -367,7 +367,7 @@ async function handleRootRequest() {
                 formattedLinks = fileLinks.join('\\n\\n');
                 break;
               case 'bbcodeBtn':
-                formattedLinks = fileLinks.map(url => '[img]' + url + '[/img]').join('\\n\\n');
+                formattedLinks = fileLinks.map(url => '[img]' + url + '&.png[/img]').join('\\n\\n');
                 break;
               case 'markdownBtn':
                 formattedLinks = fileLinks.map(url => '![image](' + url + ')').join('\\n\\n');
