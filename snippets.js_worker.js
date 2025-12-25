@@ -31,12 +31,15 @@ async function handleRootRequest() {
   <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>免费图床文件服务</title>
+  <title>免费图床/文件服务</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <link rel="icon" href="https://dash.cloudflare.com/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.2.7/css/fileinput.min.css" integrity="sha512-qPjB0hQKYTx1Za9Xip5h0PXcxaR1cRbHuZHo9z+gb5IgM6ZOTtIH4QLITCxcCp/8RMXtw2Z85MIZLv6LfGTLiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" integrity="sha512-6S2HWzVFxruDlZxI3sXOZZ4/eJ8AcxkQH1+JjSe/ONCEqR9L4Ysq5JdT5ipqtzU7WHalNwzwBv+iE51gNHJNqQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/bootstrap-fileinput/5.2.7/css/fileinput.min.css" />
+  <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
+  <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <style>
       body {
           margin: 0;
@@ -138,8 +141,8 @@ async function handleRootRequest() {
 <body>
   <div class="background" id="background"></div>
   <div class="card">
-      <div class="title">免费图床文件服务, 限制<20MB</div>
-      <button type="button" class="btn" id="viewCacheBtn" title="查看历史记录"><i class="fas fa-clock"></i></button>
+      <div class="title">免费图床文件服务, 限制≤20MB</div>
+      <button type="button" class="btn" id="viewCacheBtn" title="查看历史记录">🗓️</button>
       <!-- <button type="button" class="btn" id="compressionToggleBtn"><i class="fas fa-compress"></i></button> -->
       <div class="card-body">
           <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
@@ -158,10 +161,10 @@ async function handleRootRequest() {
           </form>
       </div>
       <div class="title">CloudFlare家Snippets/Worker/Pages部署TG图床</div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.2.7/js/fileinput.min.js" integrity="sha512-CCLv901EuJXf3k0OrE5qix8s2HaCDpjeBERR2wVHUwzEIc7jfiK9wqJFssyMOc1lJ/KvYKsDenzxbDTAQ4nh1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.2.7/js/locales/zh.min.js" integrity="sha512-IizKWmZY3aznnbFx/Gj8ybkRyKk7wm+d7MKmEgOMRQDN1D1wmnDRupfXn6X04pwIyKFWsmFVgrcl0j6W3Z5FDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js" integrity="sha512-lbwH47l/tPXJYG9AcFNoJaTMhGvYWhVM9YI43CT+uteTRRaiLCui8snIgyAN8XWgNjNhCqlAUdzZptso6OCoFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://s4.zstatic.net/ajax/libs/jquery/3.6.0/jquery.min.js" />
+      <script src="https://s4.zstatic.net/ajax/libs/bootstrap-fileinput/5.2.7/js/fileinput.min.js" />
+      <script src="https://s4.zstatic.net/ajax/libs/bootstrap-fileinput/5.2.7/js/locales/zh.min.js" />
+      <script src="https://s4.zstatic.net/ajax/libs/toastr.js/2.1.4/toastr.min.js" />
       <script>
       async function fetchBingImages() {
         const response = await fetch('/bing-images');
