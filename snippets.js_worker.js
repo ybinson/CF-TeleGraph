@@ -161,10 +161,10 @@ async function handleRootRequest() {
           </form>
       </div>
       <div class="title">CloudFlare家Snippets/Worker/Pages部署TG图床</div>
-      <script src="https://s4.zstatic.net/ajax/libs/jquery/3.6.0/jquery.min.js" />
-      <script src="https://s4.zstatic.net/ajax/libs/bootstrap-fileinput/5.2.7/js/fileinput.min.js" />
-      <script src="https://s4.zstatic.net/ajax/libs/bootstrap-fileinput/5.2.7/js/locales/zh.min.js" />
-      <script src="https://s4.zstatic.net/ajax/libs/toastr.js/2.1.4/toastr.min.js" />
+      <script src="https://s4.zstatic.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://s4.zstatic.net/ajax/libs/bootstrap-fileinput/5.2.7/js/fileinput.min.js"></script>
+      <script src="https://s4.zstatic.net/ajax/libs/bootstrap-fileinput/5.2.7/js/locales/zh.min.js"></script>
+      <script src="https://s4.zstatic.net/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
       <script>
       async function fetchBingImages() {
         const response = await fetch('/bing-images');
