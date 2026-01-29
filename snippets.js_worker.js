@@ -142,7 +142,7 @@ async function handleRootRequest() {
   <div class="background" id="background"></div>
   <div class="card">
       <div class="title">免费图床文件服务, 限制≤20MB</div>
-      <button type="button" class="btn" id="viewCacheBtn" title="查看历史记录">🗓️</button>
+      <button type="button" class="btn" id="viewCacheBtn" title="查看历史记录">📋</button>
       <!-- <button type="button" class="btn" id="compressionToggleBtn"><i class="fas fa-compress"></i></button> -->
       <div class="card-body">
           <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
@@ -160,7 +160,9 @@ async function handleRootRequest() {
               <div id="cacheContent" style="display: none;"></div>
           </form>
       </div>
-      <div class="title">CloudFlare家Snippets/Worker/Pages部署TG图床</div>
+      <div class="title">
+      <a href="https://github.com/ybinson/CF-TeleGraph" >CloudFlare家Snippets/Worker/Pages部署TG图床</a>
+      </div>
       <script src="https://s4.zstatic.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script src="https://s4.zstatic.net/ajax/libs/bootstrap-fileinput/5.2.7/js/fileinput.min.js"></script>
       <script src="https://s4.zstatic.net/ajax/libs/bootstrap-fileinput/5.2.7/js/locales/zh.min.js"></script>
